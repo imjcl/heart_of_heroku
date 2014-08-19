@@ -11,10 +11,12 @@ Gem::Specification.new do |s|
   s.authors     = ["Arbind Thakur", "Steven Hsieh", "Jay Liu"]
   s.email       = "jaycliu@gmail.com"   
   s.license     = "MIT"
+  s.homepage    = "https://github.com/imjcl/heart_of_heroku"
 
   # Manifest
   s.files       = `git ls-files`.split("\n")
 
 
+  s.add_runtime_dependency "json", "~> 1.8"
   s.add_runtime_dependency "rest-client", "~> 1.7"
 end
