@@ -1,4 +1,6 @@
 require "rest-client"
+require "json"
+
 require "heart_of_heroku/account"
 
 module HeartOfHeroku
