@@ -9,4 +9,8 @@ module HeartOfHeroku
   def self.hi
     puts "Hello world!"
   end
+
+  def self.set_auth_key token
+    AUTH_KEY = token
+  end
 end
