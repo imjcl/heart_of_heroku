@@ -1,7 +1,7 @@
 module HeartOfHeroku
   class Account
-    def self.get_info token
-      RestClient.get "#{BASE_URI}/account", accept: "#{ACCEPT_HEADER}", authorization: "Bearer #{token}"
+    def self.get_info
+     HeartOfHeroku::heroku_get "account"
     end
   end
 end
