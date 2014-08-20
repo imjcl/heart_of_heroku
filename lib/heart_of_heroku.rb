@@ -11,7 +11,7 @@ module HeartOfHeroku
   end
 
   def self.set_auth_key token
-    AUTH_KEY = token
+    const_set "AUTH_KEY", token
   end
 
   def self.heroku_get endpoint
