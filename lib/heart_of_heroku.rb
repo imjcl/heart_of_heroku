@@ -3,6 +3,7 @@ require "json"
 
 require "heart_of_heroku/account"
 require "heart_of_heroku/apps"
+require "heart_of_heroku/client"
 
 module HeartOfHeroku
   BASE_URI = "https://api.heroku.com"
