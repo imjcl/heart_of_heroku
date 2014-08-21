@@ -11,10 +11,6 @@ module HeartOfHeroku
     puts "Hello world!"
   end
 
-  def self.set_auth_key token
-    const_set "AUTH_KEY", token
-  end
-
   def self.heroku_get endpoint
     JSON.parse RestClient.get "#{BASE_URI}/#{endpoint}", accept: ACCEPT_HEADER, authorization: "Bearer #{AUTH_KEY}"
   end
