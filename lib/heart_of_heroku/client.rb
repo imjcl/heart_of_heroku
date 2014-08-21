@@ -1,6 +1,6 @@
 module HeartOfHeroku
   class Client
-    def set_auth_key token
+    def new token
       @auth_key = token
     end
   end
