@@ -7,5 +7,9 @@ module HeartOfHeroku
     def account
       @account ||= Account.get_info(@auth_key)
     end
+
+    def list_apps
+      @apps ||= Apps.get_apps(@auth_key)
+    end
   end
 end
