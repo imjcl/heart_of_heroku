@@ -11,7 +11,7 @@ module HeartOfHeroku
     puts "Hello world!"
   end
 
-  def self.heroku_get endpoint
-    JSON.parse RestClient.get "#{BASE_URI}/#{endpoint}", accept: ACCEPT_HEADER, authorization: "Bearer #{AUTH_KEY}"
+  def self.heroku_get endpoint, auth_key
+    JSON.parse RestClient.get "#{BASE_URI}/#{endpoint}", accept: ACCEPT_HEADER, authorization: "Bearer #{auth_key}"
   end
 end
