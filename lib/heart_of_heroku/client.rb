@@ -7,5 +7,9 @@ module HeartOfHeroku
     def account
       find "account"
     end
+
+    def apps
+      find "apps"
+    end
   end
 end
