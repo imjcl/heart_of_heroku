@@ -1,5 +1,5 @@
 module HeartOfHeroku
-  class Client < Base
+  class Client < HeartOfHeroku::Base
     def initialize auth_key
       @auth_key = auth_key
     end
