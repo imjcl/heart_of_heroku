@@ -10,7 +10,7 @@ module HeartOfHeroku
 
     def app option=''
       find "apps" if id.empty?
-      find "apps", id
+      find "apps", id unless id.empty?
     end
   end
 end
