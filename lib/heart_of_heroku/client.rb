@@ -2,7 +2,10 @@ module HeartOfHeroku
   class Client < Base
     def initialize token
       @auth_key = token
-      @endpoint = "account"
+    end
+
+    def account
+      find "account"
     end
   end
 end
