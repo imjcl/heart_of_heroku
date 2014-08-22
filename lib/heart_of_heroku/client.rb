@@ -3,7 +3,6 @@ module HeartOfHeroku
     def initialize token
       @auth_key = token
       @endpoint = "account"
-      super
     end
   end
 end
