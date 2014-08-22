@@ -8,7 +8,7 @@ module HeartOfHeroku
       find "account"
     end
 
-    def app option=''
+    def app id=''
       find "apps" if id.empty?
       find "apps", id unless id.empty?
     end
