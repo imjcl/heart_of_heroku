@@ -1,4 +1,4 @@
 module HeartOfHeroku
-  class Client < Base
+  class Base
   end
 end
