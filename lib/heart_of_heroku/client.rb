@@ -9,7 +9,11 @@ module HeartOfHeroku
     end
 
     def app id=''
-      find "apps" if id.empty?
+      if id.empty?
+        find "apps"
+      else
+        find "apps", id
+      end
     end
   end
 end
