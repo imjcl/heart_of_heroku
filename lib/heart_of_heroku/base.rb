@@ -12,7 +12,7 @@ module HeartOfHeroku
     def create endpoint, option=''
       path = "#{BASE_URI}/#{endpoint}"
       path += "/#{option}" unless option.empty?
-      JSON.parse RestClient.post "#{path}", accept: ACCEPT_HEADERS, authorization: "Bearer #{@auth_key}", content_type: :json
+      JSON.parse RestClient.post "#{path}", { 'x' => 1 }.to_json, accept: ACCEPT_HEADERS, authorization: "Bearer #{@auth_key}", content_type: :json
     end
   end
 end
