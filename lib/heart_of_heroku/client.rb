@@ -25,5 +25,14 @@ module HeartOfHeroku
         find endpoint, id
       end
     end
+
+    def app_addon app_id, addon_id = ''
+      endpoint = "apps/#{app_id}/addons"
+      if addon_id.empty?
+        find endpoint
+      else
+        find endpoint, addon_id
+      end      
+    end
   end
 end
