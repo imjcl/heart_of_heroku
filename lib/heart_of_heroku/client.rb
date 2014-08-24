@@ -9,10 +9,20 @@ module HeartOfHeroku
     end
 
     def app id=''
+      endpoint = "apps"
       if id.empty?
-        find "apps"
+        find endpoint
       else
-        find "apps", id
+        find endpoint, id
+      end
+    end
+
+    def addon_service id=''
+      endpoint = "addon-services"
+      if id.empty?
+        find endpoint
+      else
+        find endpoint, id
       end
     end
   end
