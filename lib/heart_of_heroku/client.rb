@@ -34,5 +34,10 @@ module HeartOfHeroku
         find endpoint, addon_id
       end      
     end
+
+    def app_config_vars id
+      endpoint = "apps/#{id}/config-vars"
+      find endpoint
+    end
   end
 end
