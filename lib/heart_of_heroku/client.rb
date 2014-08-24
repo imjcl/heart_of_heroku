@@ -17,6 +17,11 @@ module HeartOfHeroku
       end
     end
 
+    def app_create
+      endpoint = "apps"
+      create endpoint
+    end
+
     def addon_service id=''
       endpoint = "addon-services"
       if id.empty?
