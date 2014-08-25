@@ -13,7 +13,7 @@ module HeartOfHeroku
       path = "#{BASE_URI}/#{endpoint}"
       path += "/#{option}" unless option.empty?
       # In this request, the 'payload' argument in this call is set to blank?
-      JSON.parse RestClient.post "#{path}", '', authorization: "Bearer #{@auth_key}", content_type: :json
+      JSON.parse RestClient.post "#{path}", '', accept: ACCEPT_HEADERS, authorization: "Bearer #{@auth_key}"
     end
   end
 end
