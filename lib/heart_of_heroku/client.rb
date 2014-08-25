@@ -41,7 +41,7 @@ module HeartOfHeroku
     end
 
     def addon_create id
-      endpoint = "apps/#{app_id}/addons"
+      endpoint = "apps/#{id}/addons"
       find endpoint, id
     end
 
