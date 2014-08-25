@@ -9,11 +9,11 @@ module HeartOfHeroku
       JSON.parse RestClient.get "#{path}", accept: ACCEPT_HEADERS, authorization: "Bearer #{@auth_key}"
     end
 
-    def create endpoint, option=''
+    def create endpoint, option='', payload={}
       path = "#{BASE_URI}/#{endpoint}"
       path += "/#{option}" unless option.empty?
       # In this request, the 'payload' argument in this call is set to blank?
-      JSON.parse RestClient.post "#{path}", '', accept: ACCEPT_HEADERS, authorization: "Bearer #{@auth_key}"
+      JSON.parse RestClient.post "#{path}", payload, accept: ACCEPT_HEADERS, authorization: "Bearer #{@auth_key}"
     end
   end
 end
