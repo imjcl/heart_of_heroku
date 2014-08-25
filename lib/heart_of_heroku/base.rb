@@ -15,5 +15,11 @@ module HeartOfHeroku
       # In this request, the 'payload' argument in this call is set to blank?
       JSON.parse RestClient.post "#{path}", payload, accept: ACCEPT_HEADERS, authorization: "Bearer #{@auth_key}"
     end
+
+    def update endpoint, option='', payload={}
+      path = "#{BASE_URI}/#{endpoint}"
+      path += "/#{option}" unless option.empty?
+      JSON.parse RestClient.put "#{path}", payload, accept: ACCEPT_HEADERS, authorization: "Bearer #{@auth_key}"
+    end
   end
 end
