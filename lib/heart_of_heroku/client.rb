@@ -40,6 +40,11 @@ module HeartOfHeroku
       end      
     end
 
+    def addon_create id
+      endpoint = "apps/#{app_id}/addons"
+      find endpoint, id
+    end
+
     def app_config_vars id
       endpoint = "apps/#{id}/config-vars"
       find endpoint
