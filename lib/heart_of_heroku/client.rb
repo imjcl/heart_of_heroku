@@ -40,9 +40,12 @@ module HeartOfHeroku
       end      
     end
 
-    def addon_create id
-      endpoint = "apps/#{id}/addons"
-      find endpoint, id
+    def addon_create app_id, plan_id
+      endpoint = "apps/#{app_id}/addons"
+      # This may not be our preferred method of doing this,
+      # because there is an optional parameter, 'config' that
+      # could be used as well, but testing for now.
+      find endpoint, id, {plan: plan_id}
     end
 
     def app_config_vars id
