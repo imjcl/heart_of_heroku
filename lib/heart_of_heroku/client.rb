@@ -45,7 +45,7 @@ module HeartOfHeroku
       # This may not be our preferred method of doing this,
       # because there is an optional parameter, 'config' that
       # could be used as well, but testing for now.
-      create endpoint, payload={plan: plan_id}
+      create endpoint, '', {plan: plan_id}
     end
 
     def app_config_vars id
@@ -55,7 +55,7 @@ module HeartOfHeroku
 
     def patch_config_vars app_id, vars
       endpoint = "apps/#{app_id}/config-vars"
-      update endpoint, payload=vars
+      update endpoint, '', vars
     end
   end
 end
