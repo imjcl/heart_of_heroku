@@ -53,8 +53,8 @@ module HeartOfHeroku
       find endpoint
     end
 
-    def patch_config_vars vars
-      endpoint = "apps/#{id}/config-vars"
+    def patch_config_vars app_id, vars
+      endpoint = "apps/#{app_id}/config-vars"
       update endpoint, payload=vars
     end
   end
