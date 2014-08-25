@@ -16,7 +16,7 @@ module HeartOfHeroku
         find endpoint, id
       end
     end
-
+    
     def addon_service id=''
       endpoint = "addon-services"
       if id.empty?
