@@ -17,6 +17,7 @@ module HeartOfHeroku
     end
 
     def update endpoint, option='', payload={}
+      puts path
       path = "#{BASE_URI}/#{endpoint}"
       path += "/#{option}" unless option.empty?
       JSON.parse RestClient.put "#{path}", payload, accept: ACCEPT_HEADERS, authorization: "Bearer #{@auth_key}"
